@@ -27,10 +27,23 @@
 
 </head>
 <body>
-<%= yield %>
+  <!-- Wrapper -->
+  <div id="wrapper">
+
+	  <!-- Main -->
+	  <div id="main">
+		  <div class="inner">
+        <%= render "common/header" %>
+        <%= yield %>
+        <%= render "common/sidebar" %>
+        <%= render "common/footer" %>
+      </div>
+    </div>
+  </div>
+  
+  
   
   <%= javascript_include_tag 'application' %>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-  
 </body>
 </html>
