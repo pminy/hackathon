@@ -12,8 +12,6 @@
 	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  
   <!-- 합쳐지고 최소화된 최신 CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   
@@ -35,12 +33,12 @@
 		  <div class="inner">
         <%= render "common/header" %>
         <%= yield %>
-        <%= render "common/sidebar" %>
-        <%= render "common/footer" %>
       </div>
     </div>
+    
+    <%= render "common/sidebar" %>
+
   </div>
-  
   
   
   <%= javascript_include_tag 'application' %>
