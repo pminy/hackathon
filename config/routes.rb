@@ -6,6 +6,9 @@ Rails.application.routes.draw do
 
 
   get '/home/intro'
+  devise_for :users
+  root 'home#index'
+  
   get '/home/index'
   get '/home/generic'
   get '/home/elements'

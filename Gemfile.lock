@@ -3,6 +3,7 @@ GIT
   revision: 61a961aedf29aa6741dc6528c55dfe6de7f700b4
   specs:
     carrierwave (1.1.0)
+      
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
