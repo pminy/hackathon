@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   resources :posts
-  root :to => 'posts#index'
+  root :to => 'home#intro'
   get '/post' => 'posts#index'
+  get '/intro' => 'home#intro'
 
-  
+
+  get '/home/intro'
   get '/home/index'
   get '/home/generic'
   get '/home/elements'
