@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :posts
-  root :to => 'home#intro'
-  get '/post' => 'posts#index'
+  #root :to => 'home#intro'
+  get '/post' => 'home#index'
   get '/intro' => 'home#intro'
 
 
@@ -12,7 +12,9 @@ Rails.application.routes.draw do
   get '/home/index'
   get '/home/generic'
   get '/home/elements'
-
+  get '/home/board'
+  
+  get 'write_post' => 'posts#new'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
