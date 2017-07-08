@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Workspace</title>
+  <%= csrf_meta_tags %>
+  
+  <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<!--<link rel="stylesheet" href="assets/css/main.css" />-->
+	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	
+  <!-- 합쳐지고 최소화된 최신 CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  
+  <!-- 부가적인 테마 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+
+</head>
+<body>
+  <!-- Wrapper -->
+  <div id="wrapper">
+
+	  <!-- Main -->
+	  <div id="main">
+		  <div class="inner">
+        <%= render "common/header" %>
+        <%= yield %>
+      </div>
+    </div>
+    
+    <%= render "common/sidebar" %>
+
+  </div>
+  
+  
+  <%= javascript_include_tag 'application' %>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</body>
+</html>
