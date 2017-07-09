@@ -12,9 +12,9 @@ Rails.application.routes.draw do
   get '/home/index'
   get '/home/generic'
   get '/home/elements'
-  get '/home/board'
+  get '/board'=>'posts#index'
   
-  get 'write_post' => 'posts#new'
+  get '/write_post' => 'posts#new'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
