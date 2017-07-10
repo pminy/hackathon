@@ -15,6 +15,11 @@ Rails.application.routes.draw do
   get '/board'=>'posts#index'
   
   get '/write_post' => 'posts#new'
+  
+  #hashtags
+  get '/posts/hashtag/:name' => 'posts#hashtags'
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

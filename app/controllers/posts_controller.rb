@@ -11,6 +11,12 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
   end
+  
+  def hashtags
+    tag = Tag.find_by(name: params[:name])
+    @posts = tag.posts
+   #?s안붙나? 
+  end
 
   # GET /posts/new
   def new
