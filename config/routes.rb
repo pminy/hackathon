@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   resources :posts
+  #as :post do
+   # get '/posts/show' => 'posts/:post_id'
+  #end
+  
   #root :to => 'home#intro'
   get '/post' => 'home#index'
   get '/intro' => 'home#intro'
@@ -21,8 +25,15 @@ Rails.application.routes.draw do
   
   #hashtags
   get '/posts/hashtag/:name' => 'posts#hashtags'
+  #댓글 달기
+  post '/posts/reply_create' => 'posts#reply_create'
   
   
+  get '/posts/reply_update_view/:post_id/:reply_id' => 'posts#reply_update_view'
+  post '/posts/reply_update/:post_id/:reply_id' => 'posts#reply_update'
+  
+  
+  get '/posts/reply_destroy/:post_id/:reply_id' => 'posts#reply_destroy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

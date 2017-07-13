@@ -1,7 +1,7 @@
 class Post < ActiveRecord::Base
     mount_uploader :image, S3Uploader
     has_and_belongs_to_many :tags
-    
+    has_many:replies
     after_create do
         post = Post.find_by(id: self.id)
         hashtags = self.content.scan(/#\w+/)

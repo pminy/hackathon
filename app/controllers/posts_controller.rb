@@ -17,6 +17,37 @@ class PostsController < ApplicationController
     @posts = tag.posts
    #?s안붙나? 
   end
+  
+  #댓글 달기 
+    def reply_create
+      reply = Reply.new
+      reply.content=params[:reply_content]
+      reply.post_id=params[:post_id]
+      reply.save
+      redirect_to:back
+    end
+    
+    def reply_update_view
+      @post = Post.find(params[:post_id])
+      @reply = Reply.find(params[:reply_id])
+    end
+  
+  def reply_update
+    @reply = Reply.find(params[:reply_id])
+    @reply.content = params[:update_reply_content]
+    @reply.save
+    redirect_to posts_path(@post)
+     
+  end
+    
+   
+
+  
+  def reply_destroy
+    @reply = Reply.find(params[:reply_id])
+    @reply.destroy
+    redirect_to:back
+  end
 
   # GET /posts/new
   def new
@@ -79,4 +110,9 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:title, :content, :image)
     end
+    
+    
+    
+    
+    
 end
