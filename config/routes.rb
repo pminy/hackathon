@@ -7,6 +7,9 @@ Rails.application.routes.draw do
 
   get '/home/intro'
   devise_for :users
+  as :user do
+    get 'users/show' => 'devise/registrations#show'
+  end
   root 'home#index'
   
   get '/home/index'
