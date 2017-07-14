@@ -17,7 +17,6 @@
       
       <div class="posts">
   		  <% @posts.each do |post|%>
-  		
     			<article>
     				<a href="/posts/<%=post.id %>" class="image"><%= image_tag("#{post.image}") %></a>
     				<h3><%=post.title %></h3>
