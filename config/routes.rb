@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   get '/home/index'
   get '/home/generic'
   get '/home/elements'
-  get '/board'=>'posts#index'
+  get '/posts'=>'posts#index'
   
   get '/write_post' => 'posts#new'
   

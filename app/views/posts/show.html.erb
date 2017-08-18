@@ -1,4 +1,6 @@
-
+<!-- Banner -->
+<section id="banner"></section>
+  
 <p id="notice"><%= notice %></p>
 <p>
   <strong>제목:</strong>
@@ -16,7 +18,9 @@
 
 <p>
   <strong>사진:</strong>
+  <span class="image object">
   <%= image_tag("#{@post.image}") %>
+  </span>
 </p>
 
 
@@ -44,4 +48,6 @@
     <%end%>
     <br>
   <hr>
-<!--댓글 end->
+<!--댓글 end-->
+
+

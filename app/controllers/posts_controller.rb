@@ -33,14 +33,16 @@ class PostsController < ApplicationController
     end
   
   def reply_update
+    @post = Post.find(params[:post_id])
     @reply = Reply.find(params[:reply_id])
     @reply.content = params[:update_reply_content]
     @reply.save
-    redirect_to posts_path(@post)
+    
+    render :show, status: :created, location: @post
+    #redirect_to controller: 'posts', actions: 'show'
+    #redirect_to posts_path(@post)
      
   end
-    
-   
 
   
   def reply_destroy
@@ -65,7 +67,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to '/board', 
+        format.html { redirect_to '/posts', 
                       notice: 'Post was successfully created.'
         }
         format.json { render :show, status: :created, location: @post }
