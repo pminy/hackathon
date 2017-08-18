@@ -18,7 +18,7 @@ class PostsController < ApplicationController
    #?s안붙나? 
   end
   
-  #댓글 달기 
+   #댓글 달기 
     def reply_create
       reply = Reply.new
       reply.content=params[:reply_content]
@@ -37,19 +37,16 @@ class PostsController < ApplicationController
     @reply = Reply.find(params[:reply_id])
     @reply.content = params[:update_reply_content]
     @reply.save
-    
     render :show, status: :created, location: @post
-    #redirect_to controller: 'posts', actions: 'show'
-    #redirect_to posts_path(@post)
-     
   end
+    
 
-  
   def reply_destroy
     @reply = Reply.find(params[:reply_id])
     @reply.destroy
     redirect_to:back
   end
+
 
   # GET /posts/new
   def new
@@ -102,8 +99,6 @@ class PostsController < ApplicationController
     end
   end
   
- 
-  
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -115,9 +110,6 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:title, :content, :image)
     end
-    
-    
-    
-    
+
     
 end

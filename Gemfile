@@ -4,6 +4,9 @@ gem 'carrierwave', github:'carrierwaveuploader/carrierwave'
 gem 'mini_magick'
 gem 'fog-aws'
 
+gem 'sqlite3' ,group: :development
+gem 'pg' ,group: :production
+
 # for login
 gem 'devise'
 

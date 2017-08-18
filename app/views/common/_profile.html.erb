@@ -1,15 +1,31 @@
+
+<div class="">
+
 <div class="content_card">
-  <div class="card">
-    <div class="firstinfo"><%= image_tag current_user.profile_img %>
+  <!--<div class="card">-->
+  
+    <!--<div class="firstinfo"><%#= image_tag current_user.profile_img %>-->
+    <br>
+    <center>
+    <div class="firstinfo"><%= image_tag "person.jpg" %>
+    </center>
+    <br>
       <div class="profileinfo">
-        <h1>Excavator</h1>
-        <h3><%= current_user.email %></h3>
-        <p class="bio">Lived all my life on the top of mount Fuji, learning the way to be a Ninja Dev.</p>
+        <br>
+        <center>
+        <h3><code><%= current_user.email %></code></h3>
+        <p class="bio">반갑습니다,</p><p><%= current_user.email %>님</p>
+        </center>
       </div>
-    </div>
+    <!--</div>-->
     <ul class="actions session_button">
-			<li><a href="/users/sign_out" class="button special">Logout</a></li>
-			<li><a href="/users/show" class="button">MyPage</a></li>
+      <center>
+			<li><a href="/users/sign_out" class="button special">로그아웃</a></li>
+			<li><a href="/users/show" class="button">마이페이지</a></li>
+			</center>
 	  </ul>
-  </div>
+	 
+  <!--</div>-->
+</div>
+
 </div>

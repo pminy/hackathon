@@ -55,12 +55,13 @@
                   <input type="text" class="form-control" name="update_reply_content" value="<%=@reply.content%>">
                 </div>
             
-                <%@post.replies.each do |rply|%>
-                  <button right:0; type="submit" class="btn btn-default" style="align-items: right;">수정</button>
-                
-                  <button style="position:relative; right:0;" class="btn btn-default"><a href="/posts/reply_destroy/<%=@post.id%>/<%=rply.id%>" style="align-items: right;">삭제</a></button>            
-                <%end%>
+                <button right:0; type="submit" class="button special" style="align-items: right;">수정</button>
+                <%#@post.replies.each do |rply|%>
+                  <!--<button style="position:relative; right:0;" class="button special"><a href="/posts/reply_destroy/<%#=@post.id%>/<%#=rply.id%>" style="align-items: right;">삭제</a></button>-->            
+                <%#end%>
         </form>
+        
+        
         
         
         
